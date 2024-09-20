@@ -1,0 +1,4198 @@
+{
+	"info": {
+		"_postman_id": "ac38fbc7-64e7-4c48-87a0-cb0f61db18b0",
+		"name": "Timesheet_Application Copy 2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37540811"
+	},
+	"item": [
+		{
+			"name": "S_SuperAdmin(Superadmin Creation))",
+			"item": [
+				{
+					"name": "Create_SuperAdmin_Details",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"firstName\": \"Uday\",\r\n  \"lastName\": \"p\",\r\n  \"address\": \"123 Main St\",\r\n  \"mobileNumber\": \"1294566780\",\r\n  \"emailId\": \"udayp@gmail.com\",\r\n  \"password\": \"password123\",\r\n  \"aadharNumber\": \"123456689012\",\r\n  \"panNumber\": \"ABCDE1934F\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8089/superadmins",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"superadmins"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update_SuperAdmin_Details",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"firstName\": \"Udayuyub\",\r\n  \"lastName\": \"p\",\r\n  \"address\": \"123 Main St\",\r\n  \"mobileNumber\": \"1294566780\",\r\n  \"emailId\": \"udayp@gmail.com\",\r\n  \"password\": \"password123\",\r\n  \"aadharNumber\": \"123456689012\",\r\n  \"panNumber\": \"ABCDE1934F\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8089/superadmins/SA001",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"superadmins",
+								"SA001"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get_SuperadminById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8089/superadmins/SA001",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"superadmins",
+								"SA001"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Validate_SuperAdmin_EmailId&Password",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8089/superadmins/validate?emailId=udayp@gmail.com&password=password123",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"superadmins",
+								"validate"
+							],
+							"query": [
+								{
+									"key": "emailId",
+									"value": "udayp@gmail.com"
+								},
+								{
+									"key": "password",
+									"value": "password123"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete SuperAdmin",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8089/superadmins/SA001",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"superadmins",
+								"SA001"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All SuperAdmins",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8089/superadmins",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"superadmins"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Super_Admin",
+			"item": [
+				{
+					"name": "Admin_Creation",
+					"item": [
+						{
+							"name": "AdminDetailsCreation",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"firstName\": \"Sai \",\r\n    \"lastName\": \"Cholangi\",\r\n    \"address\": \"123 Elm Street\",\r\n    \"mobileNumber\": \"1934569390\",\r\n    \"emailId\": \"sai239@gmail.com\",\r\n    \"password\":\"sai56sai\",\r\n    \"aadharNumber\": \"123559589323\",\r\n    \"panNumber\": \"ABCDE8984F\",\r\n    \"canCreateEmployee\": true,\r\n    \"canEditEmployee\": true,\r\n    \"canDeleteEmployee\": true,\r\n    \"canCreateProject\": true,\r\n    \"canEditProject\": true,\r\n    \"canDeleteProject\": true\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/admins/saveadmin",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"admins",
+										"saveadmin"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get_addall_admins",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/admins/getadmins",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"admins",
+										"getadmins"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get_adminby_id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/admins/AD001",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"admins",
+										"AD001"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get_admin_by-fname",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/admins/by-firstName/Sai ",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"admins",
+										"by-firstName",
+										"Sai "
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Updateadmin_by_admin_Id",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"firstName\": \"Saimani \",\r\n    \"lastName\": \"Cholangi\",\r\n    \"address\": \"123 Elm Street\",\r\n    \"mobileNumber\": 1934569390,\r\n    \"emailId\": \"sai239@gmail.com\",\r\n    \"aadharNumber\": 123559589323,\r\n    \"panNumber\": \"ABCDE8984F\",\r\n    \"password\": \"sai56sai\",\r\n    \"canCreateEmployee\": true,\r\n    \"canEditEmployee\": true,\r\n    \"canDeleteEmployee\": true,\r\n    \"canCreateProject\": true,\r\n    \"canEditProject\": true,\r\n    \"canDeleteProject\": true\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/admins/AD001",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"admins",
+										"AD001"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get admin permissiions",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/admins/permissions/AD001",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"admins",
+										"permissions",
+										"AD001"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Validate Admin Credentials",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/admins/validate?emailId=sai239@gmail.com&password=sai56sai",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"admins",
+										"validate"
+									],
+									"query": [
+										{
+											"key": "emailId",
+											"value": "sai239@gmail.com"
+										},
+										{
+											"key": "password",
+											"value": "sai56sai"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete admin",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/admins/AD002",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"admins",
+										"AD002"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Approve/Reject_Admin_LeaveRequests",
+					"item": [
+						{
+							"name": "ADGetLeaveRequest",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/superadmin",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"superadmin"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "ADApproveLeaveRequest",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/superadmin/2/approve",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"superadmin",
+										"2",
+										"approve"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "ADRejectLeaveRequest",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"reasonForRejection\": \"Project deadlines\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/superadmin/2/reject",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"superadmin",
+										"2",
+										"reject"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "ApproveAllLeaveRequest",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"ids\": [2,3]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/superadmin/leave-requests/approve-all",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"superadmin",
+										"leave-requests",
+										"approve-all"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "RejectAllLeaveRequest",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"ids\": [2,3],\r\n  \"reasonForRejection\": \"Project deadlines\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/superadmin/leave-requests/reject-all",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"superadmin",
+										"leave-requests",
+										"reject-all"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "UpdateAdminLeaveRequest",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8081/admin/leave-requests/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"admin",
+										"leave-requests",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DeleteAdminLeaveRequest",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8081/admin/leave-requests/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"admin",
+										"leave-requests",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetAdminLeveRequestById",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8081/admin/leave-requests/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"admin",
+										"leave-requests",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Approve/Reject_Admin_WorkHours",
+					"item": [
+						{
+							"name": "ApproveAdminWHbyId",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/admins/working-hours/approve/8",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"admins",
+										"working-hours",
+										"approve",
+										"8"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetWHbyAdminIdandDateRange",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/admins/working-hours/AD001/range?startDate=2024-09-01&endDate=2024-09-15",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"admins",
+										"working-hours",
+										"AD001",
+										"range"
+									],
+									"query": [
+										{
+											"key": "startDate",
+											"value": "2024-09-01"
+										},
+										{
+											"key": "endDate",
+											"value": "2024-09-15"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "RejectAdminWHbyId",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/admins/working-hours/reject/16?reason=Incorrect Working hours",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"admins",
+										"working-hours",
+										"reject",
+										"16"
+									],
+									"query": [
+										{
+											"key": "reason",
+											"value": "Incorrect Working hours"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "updateAdminWHbyId",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n        \"id\": 4,\r\n        \"employeeId\": \"AD001\",\r\n        \"projectId\": \"PRO001\",\r\n        \"date\": \"2024-09-04\",\r\n        \"hours\": 4,\r\n        \"status\": \"NEW\"\r\n    \r\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/admins/working-hours/update",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"admins",
+										"working-hours",
+										"update"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "ApproveAdminTSwithDateRange",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/admins/working-hours/AD001/approve-range?startDate=2024-09-01&endDate=2024-09-15",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"admins",
+										"working-hours",
+										"AD001",
+										"approve-range"
+									],
+									"query": [
+										{
+											"key": "startDate",
+											"value": "2024-09-01"
+										},
+										{
+											"key": "endDate",
+											"value": "2024-09-15"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "RejectAdminTSwithDateRange",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/admins/working-hours/AD001/reject-range?startDate=2024-09-01&endDate=2024-09-08&reason=update timings",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"admins",
+										"working-hours",
+										"AD001",
+										"reject-range"
+									],
+									"query": [
+										{
+											"key": "startDate",
+											"value": "2024-09-01"
+										},
+										{
+											"key": "endDate",
+											"value": "2024-09-08"
+										},
+										{
+											"key": "reason",
+											"value": "update timings"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DeleteAdminTSwithAdminId&DateRange",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/admins/working-hours/AD001/delete-range?startDate=2024-09-01&endDate=2024-09-02",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"admins",
+										"working-hours",
+										"AD001",
+										"delete-range"
+									],
+									"query": [
+										{
+											"key": "startDate",
+											"value": "2024-09-01"
+										},
+										{
+											"key": "endDate",
+											"value": "2024-09-02"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get_Adminprojects_WorkhoursByAdminId",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/admins/working-hours/AD001/projects",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"admins",
+										"working-hours",
+										"AD001",
+										"projects"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetAllAdminsWH",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/admins/all/range?startDate=2024-09-01&endDate=2024-09-15",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"admins",
+										"all",
+										"range"
+									],
+									"query": [
+										{
+											"key": "startDate",
+											"value": "2024-09-01"
+										},
+										{
+											"key": "endDate",
+											"value": "2024-09-15"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetAllAdminWorkHoursStatus",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/admins/all/new",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"admins",
+										"all",
+										"new"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Admin",
+			"item": [
+				{
+					"name": "add employee",
+					"item": [
+						{
+							"name": "Create_employee",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n   \"firstName\": \"qsads7\",\r\n  \"lastName\": \"Doe\",\r\n  \"address\": \"Punjab India\",\r\n  \"mobileNumber\": \"9008178466\",\r\n  \"emailId\": \"pravee0991@gmail.com\",\r\n  \"password\": \"password1999\",\r\n//   \"projectId\": \"ABC123\",\r\n  \"aadharNumber\": \"225656679436\",\r\n  \"panNumber\": \"ADNRD9909E\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8002/employee/saveemployee?adminId=AD001",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8002",
+									"path": [
+										"employee",
+										"saveemployee"
+									],
+									"query": [
+										{
+											"key": "adminId",
+											"value": "AD001"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get_all_employess",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8002/employee/getemployees",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8002",
+									"path": [
+										"employee",
+										"getemployees"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get_employee_by_employeeId",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8002/employee/EMP001",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8002",
+									"path": [
+										"employee",
+										"EMP001"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update_employee_by_employeeId",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": " {\r\n        // \"employeeId\": \"EMP003\",\r\n        \"firstName\": \"SAI  MMM \",\r\n        \"lastName\": \"Doe\",\r\n        \"address\": \"Punjab India\",\r\n        \"mobileNumber\": 9999668456,\r\n        \"emailId\": \"sai193@gmail.com\",\r\n        \"password\": \"password123\",\r\n        \"aadharNumber\": 123914679436,\r\n        \"panNumber\": \"ADNRC7786E\",\r\n        \"supervisor\": null,\r\n        \"supervisorId\": null,\r\n        \"projects\": null\r\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8002/employee/EMP001?adminId=AD001",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8002",
+									"path": [
+										"employee",
+										"EMP001"
+									],
+									"query": [
+										{
+											"key": "adminId",
+											"value": "AD001"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete_employee_by_employeeId",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8002/employee/EMP003?adminId=AD001",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8002",
+									"path": [
+										"employee",
+										"EMP003"
+									],
+									"query": [
+										{
+											"key": "adminId",
+											"value": "AD001"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Validate Employee Credentials",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8002/employee/validate?emailId=sai19336@gmail.com&password=password123",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8002",
+									"path": [
+										"employee",
+										"validate"
+									],
+									"query": [
+										{
+											"key": "emailId",
+											"value": "sai19336@gmail.com"
+										},
+										{
+											"key": "password",
+											"value": "password123"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Upload_Employees",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "files",
+											"type": "file",
+											"src": "New Microsoft Excel Worksheet.xlsx"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8002/employee/import-excel",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8002",
+									"path": [
+										"employee",
+										"import-excel"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Project_Creation",
+					"item": [
+						{
+							"name": "Create Project",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    // \"projectId\":\"PRO001\",\r\n  \"projectTitle\": \"Payroll Project\",\r\n    \"projectDescription\": \"Description of the new Payroll project\",\r\n    \"employeeTeamMembers\": [\r\n        \"EMP004\",\r\n        \"EMP002\"],\r\n    \"supervisorTeamMembers\": [\r\n        \"EMP005\"\r\n        \r\n        ]\r\n\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8081/admin/createprojects?adminId=AD001",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"admin",
+										"createprojects"
+									],
+									"query": [
+										{
+											"key": "adminId",
+											"value": "AD001"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update a Project",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    // \"projectId\":\"PRO001\",\r\n  \"projectTitle\": \"New Project\",\r\n    \"projectDescription\": \"Description of the new project\",\r\n    \"employeeTeamMembers\": [\r\n        \"EMP001\",\r\n        \"EMP002\"\r\n     ],\r\n    \"supervisorTeamMembers\": [\r\n        \"SUP001\",\"EMP004\"\r\n        ]\r\n\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8081/admin/projects/PRO001?adminId=AD001",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"admin",
+										"projects",
+										"PRO001"
+									],
+									"query": [
+										{
+											"key": "adminId",
+											"value": "AD001"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Getall Projects",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8081/admin/projects",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"admin",
+										"projects"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Project by ID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8081/admin/projects/PRO001",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"admin",
+										"projects",
+										"PRO001"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8081/admin/projects/CTPL001?adminId=AD002",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"admin",
+										"projects",
+										"CTPL001"
+									],
+									"query": [
+										{
+											"key": "adminId",
+											"value": "AD002"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Approve/Reject_Supervisor_LeaveRequest",
+					"item": [
+						{
+							"name": "GetAllSupervisorLeaveRequests",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8081/admin",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"admin"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "ApproveSUPLRByAdminID",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8086/supervisor/leave-requests/2/approve?adminId=AD001",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8086",
+									"path": [
+										"supervisor",
+										"leave-requests",
+										"2",
+										"approve"
+									],
+									"query": [
+										{
+											"key": "adminId",
+											"value": "AD001"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "RejectSUPLRByAdminID",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8086/supervisor/leave-requests/1/reject?adminId=AD001&reasonForRejection=Too Many Leaves",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8086",
+									"path": [
+										"supervisor",
+										"leave-requests",
+										"1",
+										"reject"
+									],
+									"query": [
+										{
+											"key": "adminId",
+											"value": "AD001"
+										},
+										{
+											"key": "reasonForRejection",
+											"value": "Too Many Leaves"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "ApproveMultipleLeaveRequests",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"leaveRequestIds\": [1, 2, 3]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8086/supervisor/leave-requests/leave-requests/approve-multiple?adminId=AD001",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8086",
+									"path": [
+										"supervisor",
+										"leave-requests",
+										"leave-requests",
+										"approve-multiple"
+									],
+									"query": [
+										{
+											"key": "adminId",
+											"value": "AD001"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "rejectMultipleLeaveRequests",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"leaveRequestIds\": [1, 2, 3],\r\n    \"rejectionReason\":\"Deadline\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8086/supervisor/leave-requests/leave-requests/reject-multiple?adminId=AD001",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8086",
+									"path": [
+										"supervisor",
+										"leave-requests",
+										"leave-requests",
+										"reject-multiple"
+									],
+									"query": [
+										{
+											"key": "adminId",
+											"value": "AD001"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetSupervisorLeaveRequestById",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8086/supervisor/leave-requests/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8086",
+									"path": [
+										"supervisor",
+										"leave-requests",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "UpdateSupervisorLeaveRequestByID",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8086/supervisor/leave-requests/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8086",
+									"path": [
+										"supervisor",
+										"leave-requests",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DeleteSUPLeaveRequestByID",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8086/supervisor/leave-requests/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8086",
+									"path": [
+										"supervisor",
+										"leave-requests",
+										"2"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Approve/Reject_Supervisor_TimeSheet",
+					"item": [
+						{
+							"name": "GetWHbySupervisorIdandDateRange",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8081/admin/working-hours/SUP001/range?startDate=2023-07-01&endDate=2023-07-30",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"admin",
+										"working-hours",
+										"SUP001",
+										"range"
+									],
+									"query": [
+										{
+											"key": "startDate",
+											"value": "2023-07-01"
+										},
+										{
+											"key": "endDate",
+											"value": "2023-07-30"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "UpdateTSofSupbyID",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": " {\r\n        \"id\": 9,\r\n    \"employeeId\": \"EMP124\",\r\n    \"projectId\": \"PROJ456\",\r\n    \"date\": \"2023-07-17\",\r\n    \"hours\": 8,\r\n    \"status\": \"NEW\"\r\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8081/admin/working-hours/update",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"admin",
+										"working-hours",
+										"update"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DeleteSUPTSinRange",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8081/admin/working-hours/SUP001/delete-range?startDate=2023-07-01&endDate=2023-07-10",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"admin",
+										"working-hours",
+										"SUP001",
+										"delete-range"
+									],
+									"query": [
+										{
+											"key": "startDate",
+											"value": "2023-07-01"
+										},
+										{
+											"key": "endDate",
+											"value": "2023-07-10"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetSupWHbyProjects",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8081/admin/working-hours/SUP001/projects",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"admin",
+										"working-hours",
+										"SUP001",
+										"projects"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "New Request",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8081/api/working-hours/all/range?startDate=2023-07-01&endDate=2023-07-15",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"api",
+										"working-hours",
+										"all",
+										"range"
+									],
+									"query": [
+										{
+											"key": "startDate",
+											"value": "2023-07-01"
+										},
+										{
+											"key": "endDate",
+											"value": "2023-07-15"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetEverySupervisorTimesheetList",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8081/admin/all/range?startDate=2023-07-01&endDate=2023-07-30",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"admin",
+										"all",
+										"range"
+									],
+									"query": [
+										{
+											"key": "startDate",
+											"value": "2023-07-01"
+										},
+										{
+											"key": "endDate",
+											"value": "2023-07-30"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetAdminSupervisorWorkHoursByStatus",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8081/admin/new",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"admin",
+										"new"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "ApproveSupWHByAdminId",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8086/sup/api/working-hours/approve/10?adminId=SUP001",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8086",
+									"path": [
+										"sup",
+										"api",
+										"working-hours",
+										"approve",
+										"10"
+									],
+									"query": [
+										{
+											"key": "adminId",
+											"value": "SUP001"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "RejectSupWHByAdminId",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8086/sup/api/working-hours/reject/10?adminId=SUP001&reason=Incorrect Work Details",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8086",
+									"path": [
+										"sup",
+										"api",
+										"working-hours",
+										"reject",
+										"10"
+									],
+									"query": [
+										{
+											"key": "adminId",
+											"value": "SUP001"
+										},
+										{
+											"key": "reason",
+											"value": "Incorrect Work Details"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "ApproveMultipleWHSUPByAdminId",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8086/sup/api/working-hours/SUP001/approve-range?startDate=2023-07-01&endDate=2023-07-15&adminId=AD001",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8086",
+									"path": [
+										"sup",
+										"api",
+										"working-hours",
+										"SUP001",
+										"approve-range"
+									],
+									"query": [
+										{
+											"key": "startDate",
+											"value": "2023-07-01"
+										},
+										{
+											"key": "endDate",
+											"value": "2023-07-15"
+										},
+										{
+											"key": "adminId",
+											"value": "AD001"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "RejectMultipleWHSUPByAdminId",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8086/sup/api/working-hours/SUP001/reject-range?startDate=2023-07-16&endDate=2023-07-30&reason=Incorrect Loggin details&adminId=AD001",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8086",
+									"path": [
+										"sup",
+										"api",
+										"working-hours",
+										"SUP001",
+										"reject-range"
+									],
+									"query": [
+										{
+											"key": "startDate",
+											"value": "2023-07-16"
+										},
+										{
+											"key": "endDate",
+											"value": "2023-07-30"
+										},
+										{
+											"key": "reason",
+											"value": "Incorrect Loggin details"
+										},
+										{
+											"key": "adminId",
+											"value": "AD001"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get_SupervisorProjectWorkingHoursBYSupervisorId",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8086/sup/api/working-hours/SUP001/projects",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8086",
+									"path": [
+										"sup",
+										"api",
+										"working-hours",
+										"SUP001",
+										"projects"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetMultipleSupervisorsBySupervisorId&Range",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\r\n\r\n \"employeeIds\" : [ \"SUP001\"]\r\n\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8086/sup/api/working-hours/multiple/range?employeeIds=SUP001,SUP002&startDate=2023-07-01&endDate=2023-07-15",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8086",
+									"path": [
+										"sup",
+										"api",
+										"working-hours",
+										"multiple",
+										"range"
+									],
+									"query": [
+										{
+											"key": "employeeIds",
+											"value": "SUP001,SUP002"
+										},
+										{
+											"key": "startDate",
+											"value": "2023-07-01"
+										},
+										{
+											"key": "endDate",
+											"value": "2023-07-15"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Admin_LeaveRequest_Creation",
+					"item": [
+						{
+							"name": "Admin-leaverequest-create",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"empId\": \"AD001\",\r\n    \"startDate\": \"2024-09-10\",\r\n    \"endDate\": \"2024-07-17\",\r\n    \"noOfDays\": 7,\r\n    \"reason\": \"Sick leave\",\r\n    \"comments\": \"Fever\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8081/admin/leave-requests",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"admin",
+										"leave-requests"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Admin-leaverequest-getall",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8081/admin/leave-requests",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"admin",
+										"leave-requests"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "UpdateAdminLeaveRequestById",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\r\n \"empId\": \"AD001\",\r\n    \"startDate\": \"2024-09-10\",\r\n    \"endDate\": \"2024-07-18\",\r\n    \"noOfDays\": 8,\r\n    \"reason\": \"Sick leave\",\r\n    \"comments\": \"Fever\"\r\n\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8081/admin/leave-requests/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"admin",
+										"leave-requests",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DeleteAdminLeaveRequest",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8081/admin/leave-requests/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"admin",
+										"leave-requests",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetAdminLeaveRequestById",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8081/admin/leave-requests/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"admin",
+										"leave-requests",
+										"2"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Admin_WorkHours_Creation",
+					"item": [
+						{
+							"name": "AddAdminWorkHours",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "[\r\n    {\r\n        \"employeeId\": \"AD002\",\r\n        \"projectId\": \"PRO001\",\r\n        \"date\": \"2024-09-01\",\r\n        \"hours\": 9\r\n    },\r\n    {\r\n        \"employeeId\": \"AD002\",\r\n        \"projectId\": \"PRO001\",\r\n        \"date\": \"2024-09-02\",\r\n        \"hours\": 9\r\n    },\r\n    {\r\n        \"employeeId\": \"AD002\",\r\n        \"projectId\": \"PRO001\",\r\n        \"date\": \"2024-09-03\",\r\n        \"hours\": 9\r\n    },\r\n    {\r\n        \"employeeId\": \"AD002\",\r\n        \"projectId\": \"PRO001\",\r\n        \"date\": \"2024-09-04\",\r\n        \"hours\": 10\r\n    },\r\n    {\r\n        \"employeeId\": \"AD002\",\r\n        \"projectId\": \"PRO001\",\r\n        \"date\": \"2024-09-05\",\r\n        \"hours\": 9\r\n    },\r\n    {\r\n        \"employeeId\": \"AD002\",\r\n        \"projectId\": \"PRO001\",\r\n        \"date\": \"2024-09-06\",\r\n        \"hours\": 9\r\n    },\r\n    {\r\n        \"employeeId\": \"AD002\",\r\n        \"projectId\": \"PRO001\",\r\n        \"date\": \"2024-09-07\",\r\n        \"hours\": 9\r\n    },\r\n    {\r\n        \"employeeId\": \"AD002\",\r\n        \"projectId\": \"PRO001\",\r\n        \"date\": \"2024-09-08\",\r\n        \"hours\": 9\r\n    }\r\n]",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8081/api/working-hours",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"api",
+										"working-hours"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getWorkhoursbyAdminId",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8081/api/working-hours/AD001",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"api",
+										"working-hours",
+										"AD001"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetAdminWHbyAdminId&range",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8081/api/working-hours/AD001/range?startDate=2024-09-01&endDate=2024-09-15",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"api",
+										"working-hours",
+										"AD001",
+										"range"
+									],
+									"query": [
+										{
+											"key": "startDate",
+											"value": "2024-09-01"
+										},
+										{
+											"key": "endDate",
+											"value": "2024-09-15"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "updatebyEmpIdandId",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 8,\r\n    \"employeeId\": \"AD001\",\r\n    \"projectId\": \"PRO001\",\r\n    \"date\": \"2024-09-08\",\r\n    \"hours\": 10,\r\n    \"status\": \"NEW\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8081/api/working-hours/update",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"api",
+										"working-hours",
+										"update"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetAllAdminsWorkhours",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8081/api/working-hours/all/range?startDate=2024-09-01&endDate=2024-09-15",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"api",
+										"working-hours",
+										"all",
+										"range"
+									],
+									"query": [
+										{
+											"key": "startDate",
+											"value": "2024-09-01"
+										},
+										{
+											"key": "endDate",
+											"value": "2024-09-15"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetAllAdminsWorkhoursByStatus",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8081/api/working-hours/all/new",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"api",
+										"working-hours",
+										"all",
+										"new"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DeleteAdminTSByAdminID&dateRange",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/admins/working-hours/AD001/delete-range?startDate=2024-09-01&endDate=2024-09-03",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"admins",
+										"working-hours",
+										"AD001",
+										"delete-range"
+									],
+									"query": [
+										{
+											"key": "startDate",
+											"value": "2024-09-01"
+										},
+										{
+											"key": "endDate",
+											"value": "2024-09-03"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Get_All_Employees",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/admin/projects/employees",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"admin",
+								"projects",
+								"employees"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get_Employee_By_Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/admin/projects/employees/EMP002",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"admin",
+								"projects",
+								"employees",
+								"EMP002"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get_All_Supervisors",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/admin/projects/supervisors",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"admin",
+								"projects",
+								"supervisors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get_Supervisor_By_Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/admin/projects/supervisors/SUP001",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"admin",
+								"projects",
+								"supervisors",
+								"SUP001"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Supervisor",
+			"item": [
+				{
+					"name": "EmployeeLeaveRequestApproval&Rejection",
+					"item": [
+						{
+							"name": "GetAllEmployeeLeaveRequests",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8087/leaverequests",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8087",
+									"path": [
+										"leaverequests"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetEmpLeaveRequestsBySupervisorId",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8087/leaverequests/supervisor/SUP001",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8087",
+									"path": [
+										"leaverequests",
+										"supervisor",
+										"SUP001"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "RejectEmpLeaverequestbySupervisorId",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8087/leaverequests/reject/1?supervisorId=SUP001&reason=Deadline",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8087",
+									"path": [
+										"leaverequests",
+										"reject",
+										"1"
+									],
+									"query": [
+										{
+											"key": "supervisorId",
+											"value": "SUP001"
+										},
+										{
+											"key": "reason",
+											"value": "Deadline"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "ApproveEmpLeaverequestbySupervisorId",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8087/leaverequests/approve/2?supervisorId=SUP001",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8087",
+									"path": [
+										"leaverequests",
+										"approve",
+										"2"
+									],
+									"query": [
+										{
+											"key": "supervisorId",
+											"value": "SUP001"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "ApproveMultipleEmployeeLeaveRequests",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"leaveRequestIds\": [8, 9],\r\n    \"supervisorId\": \"SUP001\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8087/leaverequests/approve-multiple",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8087",
+									"path": [
+										"leaverequests",
+										"approve-multiple"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "RejectMultipleEmployeeLeaveRequests",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"leaveRequestIds\": [8, 9],\r\n    \"reason\": \"Not enough leave balance\",\r\n    \"supervisorId\": \"SUP001\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8087/leaverequests/reject-multiple",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8087",
+									"path": [
+										"leaverequests",
+										"reject-multiple"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "UpdateEmpLeaveRequestById",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8087/leaverequests/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8087",
+									"path": [
+										"leaverequests",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DeleteEmpLeaverequestById",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8087/leaverequests/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8087",
+									"path": [
+										"leaverequests",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "UpdateEmpLeaveRequest",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8087/leaverequests/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8087",
+									"path": [
+										"leaverequests",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "EmployeeTimesheetApproval/Rejection",
+					"item": [
+						{
+							"name": "GetBYTSId",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8090/workinghours/8",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"workinghours",
+										"8"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetAllEmpTSinRange",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8090/workinghours/range?startDate=2024-09-01&endDate=2024-09-30",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"workinghours",
+										"range"
+									],
+									"query": [
+										{
+											"key": "startDate",
+											"value": "2024-09-01"
+										},
+										{
+											"key": "endDate",
+											"value": "2024-09-30"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetByEmpIDWithStatusNew",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8090/workinghours/employee/EMP001/new",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"workinghours",
+										"employee",
+										"EMP001",
+										"new"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetTSbyEmployeeIDandRange",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8090/workinghours/employee/EMP002/range?startDate=2024-09-01&endDate=2024-09-30",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"workinghours",
+										"employee",
+										"EMP002",
+										"range"
+									],
+									"query": [
+										{
+											"key": "startDate",
+											"value": "2024-09-01"
+										},
+										{
+											"key": "endDate",
+											"value": "2024-09-30"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "approveOrRejectWorkingHourById",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8090/workinghours/19/approval?status=REJECTED&rejectionReason=WrongTimings&employeeId=EMP001&projectId=PRO001",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"workinghours",
+										"19",
+										"approval"
+									],
+									"query": [
+										{
+											"key": "status",
+											"value": "REJECTED"
+										},
+										{
+											"key": "rejectionReason",
+											"value": "WrongTimings"
+										},
+										{
+											"key": "employeeId",
+											"value": "EMP001"
+										},
+										{
+											"key": "projectId",
+											"value": "PRO001"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "approveOrRejectWorkingHoursByEmployeeIdAndDateRange",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8090/workinghours/employee/EMP002/range/approval?startDate=2024-08-01&endDate=2024-08-29&status=APPROVED&rejectionReason&projectId=PRO001",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"workinghours",
+										"employee",
+										"EMP002",
+										"range",
+										"approval"
+									],
+									"query": [
+										{
+											"key": "startDate",
+											"value": "2024-08-01"
+										},
+										{
+											"key": "endDate",
+											"value": "2024-08-29"
+										},
+										{
+											"key": "status",
+											"value": "APPROVED"
+										},
+										{
+											"key": "rejectionReason",
+											"value": null
+										},
+										{
+											"key": "projectId",
+											"value": "PRO001"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "approveOrRejectWorkHoursBySupervisor",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8090/workinghours/supervisor/SUP001/approval?status=APPROVED",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"workinghours",
+										"supervisor",
+										"SUP001",
+										"approval"
+									],
+									"query": [
+										{
+											"key": "status",
+											"value": "APPROVED"
+										},
+										{
+											"key": "rejectionReason",
+											"value": null,
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "approveOrRejectWorkHoursForEmployee",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8090/workinghours/supervisor/SUP002/employee/EMP002/approval?status=REJECTED&rejectionReason=wrong timings",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"workinghours",
+										"supervisor",
+										"SUP002",
+										"employee",
+										"EMP002",
+										"approval"
+									],
+									"query": [
+										{
+											"key": "status",
+											"value": "REJECTED"
+										},
+										{
+											"key": "rejectionReason",
+											"value": "wrong timings"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getWorkingHoursBySupervisorIdAndDateRange",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8090/workinghours/supervisor/SUP001/range?startDate=2024-09-01&endDate=2024-09-30",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"workinghours",
+										"supervisor",
+										"SUP001",
+										"range"
+									],
+									"query": [
+										{
+											"key": "startDate",
+											"value": "2024-09-01"
+										},
+										{
+											"key": "endDate",
+											"value": "2024-09-30"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getWorkingHoursBySupervisorId",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8090/workinghours/supervisor/SUP002",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"workinghours",
+										"supervisor",
+										"SUP002"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetAllEmpTSBySupeID&DateRange",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8090/workinghours/emp/supervisor/SUP001/range?startDate=2024-08-01&endDate=2024-08-28",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"workinghours",
+										"emp",
+										"supervisor",
+										"SUP001",
+										"range"
+									],
+									"query": [
+										{
+											"key": "startDate",
+											"value": "2024-08-01"
+										},
+										{
+											"key": "endDate",
+											"value": "2024-08-28"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "UpdateByWorkhoursId",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 8,\r\n    \"employeeId\": \"EMP001\",\r\n    \"projectId\": \"CTPL001\",\r\n    \"date\": \"2024-08-15\",\r\n    \"hours\": 20,\r\n    \"status\": \"APPROVED\",\r\n    \"rejectionReason\": null\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8090/workinghours/12",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"workinghours",
+										"12"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetAllEmpTSBySupId&StatusNEW",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8090/workinghours/supervisor/SUP001/new",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"workinghours",
+										"supervisor",
+										"SUP001",
+										"new"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetEmpWHbyEmpId&SupIdwithDateRange",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8090/workinghours/employee/EMP001/supervisor/SUP001/daterange?startDate=2024-09-01&endDate=2024-09-08",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"workinghours",
+										"employee",
+										"EMP001",
+										"supervisor",
+										"SUP001",
+										"daterange"
+									],
+									"query": [
+										{
+											"key": "startDate",
+											"value": "2024-09-01"
+										},
+										{
+											"key": "endDate",
+											"value": "2024-09-08"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetEmpWHbyEmpid&SupIdwithRange&Status",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8090/workinghours/employee/EMP001/supervisor/SUP001/daterange/new?startDate=2024-09-01&endDate=2024-09-08",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"workinghours",
+										"employee",
+										"EMP001",
+										"supervisor",
+										"SUP001",
+										"daterange",
+										"new"
+									],
+									"query": [
+										{
+											"key": "startDate",
+											"value": "2024-09-01"
+										},
+										{
+											"key": "endDate",
+											"value": "2024-09-08"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "SupervisorLeaveRequestCreation",
+					"item": [
+						{
+							"name": "Create_Supervisor_Leave_Request",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"empId\": \"SUP002\",\r\n    \"startDate\": \"2024-09-16\",\r\n    \"endDate\": \"2024-09-17\",  \r\n    \"noOfDays\": 1,\r\n    \"reason\": \"Travelling\",\r\n    \"comments\": \"Business Meeting\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8086/supervisor/leave-requests",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8086",
+									"path": [
+										"supervisor",
+										"leave-requests"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetAllSupervisorLeaveRequest",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8086/supervisor/leave-requests",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8086",
+									"path": [
+										"supervisor",
+										"leave-requests"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "UpdateSupervisorLeaveRequest",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": " {\r\n        \"id\": 1,\r\n        \"empId\": \"SUP001\",\r\n        \"startDate\": \"2024-09-10\",\r\n        \"endDate\": \"2024-09-16\",\r\n        \"noOfDays\": 6,\r\n        \"reason\": \"Sick leave\",\r\n        \"comments\": \"Fever\",\r\n        \"status\": \"PENDING\",\r\n        \"reasonForRejection\": null,\r\n        \"approvedBy\": null,\r\n        \"rejectedBy\": null\r\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8086/supervisor/leave-requests/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8086",
+									"path": [
+										"supervisor",
+										"leave-requests",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetSupervisorLeaveRequestById",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8086/supervisor/leave-requests/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8086",
+									"path": [
+										"supervisor",
+										"leave-requests",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DeleteSUPleaveerquestbyId",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8086/supervisor/leave-requests/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8086",
+									"path": [
+										"supervisor",
+										"leave-requests",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Supervisor_Timesheet_Creation",
+					"item": [
+						{
+							"name": "Supervisor_TS_Create",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "[\r\n    {\r\n        \"employeeId\": \"SUP002\",\r\n        \"projectId\": \"PRO002\",\r\n        \"date\": \"2024-09-01\",\r\n        \"hours\": 5\r\n    },{\r\n        \"employeeId\": \"SUP002\",\r\n        \"projectId\": \"PRO002\",\r\n        \"date\": \"2024-09-02\",\r\n        \"hours\": 4\r\n    },\r\n    {\r\n        \"employeeId\": \"SUP002\",\r\n        \"projectId\": \"PRO002\",\r\n        \"date\": \"2024-09-03\",\r\n        \"hours\": 8\r\n    },\r\n    {\r\n        \"employeeId\": \"SUP002\",\r\n        \"projectId\": \"PRO002\",\r\n        \"date\": \"2024-09-04\",\r\n        \"hours\": 7\r\n    },\r\n    {\r\n        \"employeeId\": \"SUP002\",\r\n        \"projectId\": \"PRO002\",\r\n        \"date\": \"2024-09-05\",\r\n        \"hours\": 10\r\n    },\r\n    {\r\n        \"employeeId\": \"SUP002\",\r\n        \"projectId\": \"PRO002\",\r\n        \"date\": \"2024-09-06\",\r\n        \"hours\": 8\r\n    },\r\n    {\r\n        \"employeeId\": \"SUP002\",\r\n        \"projectId\": \"PRO002\",\r\n        \"date\": \"2024-09-07\",\r\n        \"hours\": 8\r\n    },\r\n    {\r\n        \"employeeId\": \"SUP002\",\r\n        \"projectId\": \"PRO002\",\r\n        \"date\": \"2024-09-08\",\r\n        \"hours\": 4\r\n    },\r\n    {\r\n        \"employeeId\": \"SUP002\",\r\n        \"projectId\": \"PRO002\",\r\n        \"date\": \"2024-09-09\",\r\n        \"hours\": 8\r\n    }\r\n]",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8086/sup/api/working-hours",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8086",
+									"path": [
+										"sup",
+										"api",
+										"working-hours"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get_TS_BySupervisorID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8086/sup/api/working-hours/SUP001",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8086",
+									"path": [
+										"sup",
+										"api",
+										"working-hours",
+										"SUP001"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get_TS_BySupervisorID&Range",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8086/sup/api/working-hours/SUP001/range?startDate=2023-07-01&endDate=2023-07-15",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8086",
+									"path": [
+										"sup",
+										"api",
+										"working-hours",
+										"SUP001",
+										"range"
+									],
+									"query": [
+										{
+											"key": "startDate",
+											"value": "2023-07-01"
+										},
+										{
+											"key": "endDate",
+											"value": "2023-07-15"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "UpdateSupervisorTSbyTSID",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": " {\r\n        \"id\": 9,\r\n        \"employeeId\": \"SUP001\",\r\n        \"projectId\": \"CTPL002\",\r\n        \"date\": \"2023-07-12\",\r\n        \"hours\": 10,\r\n        \"status\": \"NEW\",\r\n        \"rejectionReason\": null\r\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8086/sup/api/working-hours/update",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8086",
+									"path": [
+										"sup",
+										"api",
+										"working-hours",
+										"update"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete_SupervisorTSBySupervisorId&Range",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8086/sup/api/working-hours/SUP001/delete-range?startDate=2023-07-01&endDate=2023-07-15",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8086",
+									"path": [
+										"sup",
+										"api",
+										"working-hours",
+										"SUP001",
+										"delete-range"
+									],
+									"query": [
+										{
+											"key": "startDate",
+											"value": "2023-07-01"
+										},
+										{
+											"key": "endDate",
+											"value": "2023-07-15"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetListofALLSupervisorTSwithRange",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8086/sup/api/working-hours/all/range?startDate=2023-07-01&endDate=2023-07-30",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8086",
+									"path": [
+										"sup",
+										"api",
+										"working-hours",
+										"all",
+										"range"
+									],
+									"query": [
+										{
+											"key": "employeeId",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "startDate",
+											"value": "2023-07-01"
+										},
+										{
+											"key": "endDate",
+											"value": "2023-07-30"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetSupervisorTSByStatusasNEW",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8086/sup/api/working-hours/all/new",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8086",
+									"path": [
+										"sup",
+										"api",
+										"working-hours",
+										"all",
+										"new"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Supervisor_API's",
+					"item": [
+						{
+							"name": "Create_Supervisor",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\r\n    \"supervisorId\":\"SUP001\",\r\n   \"firstName\": \"ploth\",\r\n  \"lastName\": \"Doe\",\r\n  \"address\": \"Punjab India\",\r\n  \"mobileNumber\": \"9999668456\",\r\n  \"emailId\": \"sai19336@gmail.com\",\r\n  \"password\": \"password123\",\r\n//   \"projectId\": \"ABC123\",\r\n  \"aadharNumber\": \"123914679436\",\r\n  \"panNumber\": \"ADNRC7786E\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8086/supervisors",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8086",
+									"path": [
+										"supervisors"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get_All_Supervisors",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8086/supervisors",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8086",
+									"path": [
+										"supervisors"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get_Supervisor_By_SupervisorId",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8086/supervisors/SUP001",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8086",
+									"path": [
+										"supervisors",
+										"SUP001"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Employee",
+			"item": [
+				{
+					"name": "Employee_LeaveRequest_Creation",
+					"item": [
+						{
+							"name": "CreateEmployeeLeaveRequest",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"employeeId\": \"EMP002\",\r\n    \"startDate\": \"2024-09-14\",\r\n    \"endDate\": \"2024-09-15\",\r\n    \"noOfDays\": 1,\r\n    \"reason\": \"Travel\",\r\n    \"comments\": \"Travelling\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8087/leaverequests",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8087",
+									"path": [
+										"leaverequests"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetAllLeaveRequests",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8087/leaverequests",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8087",
+									"path": [
+										"leaverequests"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetLeaveRequestByEmployeeID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8087/leaverequests/employee/EMP002",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8087",
+									"path": [
+										"leaverequests",
+										"employee",
+										"EMP002"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "UpdateLeaveRequest",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 2,\r\n        \"employeeId\": \"EMP001\",\r\n        \"startDate\": \"2024-09-10\",\r\n        \"endDate\": \"2024-09-15\",\r\n        \"noOfDays\": 5,\r\n        \"reason\": \"Sick\",\r\n        \"comments\": \"Vacationn\",\r\n        \"status\": \"PENDING\",\r\n        \"reasonForRejection\": null,\r\n        \"approvedBy\": null,\r\n        \"rejectedBy\": null,\r\n        \"supervisorId\": null,\r\n        \"projectId\": \"PRO001\",\r\n        \"supervisors\": [\r\n            \"qsads7 Doe\"\r\n        ]\r\n    }\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8087/leaverequests/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8087",
+									"path": [
+										"leaverequests",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetEmpLeaveRequestById",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8087/leaverequests/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8087",
+									"path": [
+										"leaverequests",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DeleteEmpLeaveRequestById",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8087/leaverequests/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8087",
+									"path": [
+										"leaverequests",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Employee_Timesheet_Creation",
+					"item": [
+						{
+							"name": "CreateEmployeeTimesheetRequest",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"employeeId\": \"EMP005\",\r\n  \"projectId\": \"CTPL002\",\r\n  \"date\": \"2024-08-21\",\r\n  \"hours\": 9\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8090/workinghours",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"workinghours"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetTSbyId",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8090/workinghours/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"workinghours",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "CreateTSBulk",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "[\r\n    {\r\n        \"employeeId\": \"EMP001\",\r\n        \"projectId\": \"PRO001\",\r\n        \"date\": \"2024-09-01\",\r\n        \"hours\": 8\r\n    },\r\n    {\r\n        \"employeeId\": \"EMP001\",\r\n        \"projectId\": \"PRO001\",\r\n        \"date\": \"2024-09-02\",\r\n        \"hours\": 9\r\n    },\r\n    {\r\n        \"employeeId\": \"EMP001\",\r\n        \"projectId\": \"PRO001\",\r\n        \"date\": \"2024-09-03\",\r\n        \"hours\": 9\r\n    },\r\n    {\r\n        \"employeeId\": \"EMP001\",\r\n        \"projectId\": \"PRO001\",\r\n        \"date\": \"2024-09-04\",\r\n        \"hours\": 8\r\n    },\r\n    {\r\n        \"employeeId\": \"EMP001\",\r\n        \"projectId\": \"PRO001\",\r\n        \"date\": \"2024-09-05\",\r\n        \"hours\": 8\r\n    },\r\n    {\r\n        \"employeeId\": \"EMP001\",\r\n        \"projectId\": \"PRO001\",\r\n        \"date\": \"2024-09-06\",\r\n        \"hours\": 8\r\n    },\r\n    {\r\n        \"employeeId\": \"EMP001\",\r\n        \"projectId\": \"PRO001\",\r\n        \"date\": \"2024-09-07\",\r\n        \"hours\": 9\r\n    },\r\n    {\r\n        \"employeeId\": \"EMP001\",\r\n        \"projectId\": \"PRO001\",\r\n        \"date\": \"2024-09-08\",\r\n        \"hours\": 9\r\n    },\r\n    {\r\n        \"employeeId\": \"EMP001\",\r\n        \"projectId\": \"PRO001\",\r\n        \"date\": \"2024-09-09\",\r\n        \"hours\": 9\r\n    },\r\n    {\r\n        \"employeeId\": \"EMP001\",\r\n        \"projectId\": \"PRO001\",\r\n        \"date\": \"2024-09-10\",\r\n        \"hours\": 9\r\n    },\r\n    {\r\n        \"employeeId\": \"EMP001\",\r\n        \"projectId\": \"PRO001\",\r\n        \"date\": \"2024-09-11\",\r\n        \"hours\": 8\r\n    },\r\n    {\r\n        \"employeeId\": \"EMP001\",\r\n        \"projectId\": \"PRO001\",\r\n        \"date\": \"2024-09-12\",\r\n        \"hours\": 9\r\n    }\r\n]",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8090/workinghours/bulk",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"workinghours",
+										"bulk"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetEmpWrokhoursBYEmpId&DateRange",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8090/workinghours/employee/EMP002/range?startDate=2024-09-01&endDate=2024-09-30",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"workinghours",
+										"employee",
+										"EMP002",
+										"range"
+									],
+									"query": [
+										{
+											"key": "startDate",
+											"value": "2024-09-01"
+										},
+										{
+											"key": "endDate",
+											"value": "2024-09-30"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetAllEmpWHinDateRange",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8090/workinghours/range?startDate=2024-08-01&endDate=2024-08-30",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"workinghours",
+										"range"
+									],
+									"query": [
+										{
+											"key": "startDate",
+											"value": "2024-08-01"
+										},
+										{
+											"key": "endDate",
+											"value": "2024-08-30"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetEmpWHwithEMPID&StatusNew",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8090/workinghours/employee/EMP002/new",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"workinghours",
+										"employee",
+										"EMP002",
+										"new"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "UpdateEmpWHById",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n       \"id\": 52,\r\n        \"employeeId\": \"EMP002\",\r\n        \"projectId\": \"PRO001\",\r\n        \"date\": \"2024-08-18\",\r\n        \"hours\": 12,\r\n        \"status\": \"NEW\",\r\n        \"rejectionReason\":null\r\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8090/workinghours/52",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"workinghours",
+										"52"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DeleteEmpWHById",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8090/workinghours/10",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"workinghours",
+										"10"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DeleteAllEmpWHByDateRange",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8090/workinghours/range?startDate=2024-08-01&endDate=2024-08-30",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"workinghours",
+										"range"
+									],
+									"query": [
+										{
+											"key": "startDate",
+											"value": "2024-08-01"
+										},
+										{
+											"key": "endDate",
+											"value": "2024-08-30"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DeleteEmpWHbyEmpIdanddateRange",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8090/workinghours/employee/EMP002/range?startDate=2024-09-01&endDate=2024-09-30",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"workinghours",
+										"employee",
+										"EMP002",
+										"range"
+									],
+									"query": [
+										{
+											"key": "startDate",
+											"value": "2024-09-01"
+										},
+										{
+											"key": "endDate",
+											"value": "2024-09-30"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "UpdateEmpWHinList",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "[\r\n    {\r\n        \"id\": 37,\r\n        \"employeeId\": \"EMP002\",\r\n        \"projectId\": \"PRO001\",\r\n        \"date\": \"2024-09-16\",\r\n        \"hours\": 10,\r\n        \"status\": \"NEW\",\r\n        \"rejectionReason\": null\r\n    },\r\n    {\r\n        \"id\": 38,\r\n        \"employeeId\": \"EMP002\",\r\n        \"projectId\": \"PRO001\",\r\n        \"date\": \"2024-08-17\",\r\n        \"hours\": 10,\r\n        \"status\": \"NEW\",\r\n        \"rejectionReason\": null\r\n    },\r\n    {\r\n        \"id\": 39,\r\n        \"employeeId\": \"EMP002\",\r\n        \"projectId\": \"PRO001\",\r\n        \"date\": \"2024-08-18\",\r\n        \"hours\": 10,\r\n        \"status\": \"NEW\",\r\n        \"rejectionReason\": null\r\n    },\r\n    {\r\n        \"id\": 40,\r\n        \"employeeId\": \"EMP002\",\r\n        \"projectId\": \"PRO001\",\r\n        \"date\": \"2024-08-19\",\r\n        \"hours\": 10,\r\n        \"status\": \"NEW\",\r\n        \"rejectionReason\": null\r\n    },\r\n    {\r\n        \"id\": 41,\r\n        \"employeeId\": \"EMP002\",\r\n        \"projectId\": \"PRO001\",\r\n        \"date\": \"2024-08-20\",\r\n        \"hours\": 10,\r\n        \"status\": \"NEW\",\r\n        \"rejectionReason\": null\r\n    },\r\n    {\r\n        \"id\": 42,\r\n        \"employeeId\": \"EMP002\",\r\n        \"projectId\": \"PRO001\",\r\n        \"date\": \"2024-08-21\",\r\n        \"hours\": 8,\r\n        \"status\": \"NEW\",\r\n        \"rejectionReason\": null\r\n    },\r\n    {\r\n        \"id\": 43,\r\n        \"employeeId\": \"EMP002\",\r\n        \"projectId\": \"PRO001\",\r\n        \"date\": \"2024-08-22\",\r\n        \"hours\": 9,\r\n        \"status\": \"NEW\",\r\n        \"rejectionReason\": null\r\n    },\r\n    {\r\n        \"id\": 44,\r\n        \"employeeId\": \"EMP002\",\r\n        \"projectId\": \"PRO001\",\r\n        \"date\": \"2024-08-23\",\r\n        \"hours\": 9,\r\n        \"status\": \"NEW\",\r\n        \"rejectionReason\": null\r\n    },\r\n    {\r\n        \"id\": 45,\r\n        \"employeeId\": \"EMP002\",\r\n        \"projectId\": \"PRO001\",\r\n        \"date\": \"2024-08-24\",\r\n        \"hours\": 9,\r\n        \"status\": \"NEW\",\r\n        \"rejectionReason\": null\r\n    },\r\n    {\r\n        \"id\": 46,\r\n        \"employeeId\": \"EMP002\",\r\n        \"projectId\": \"PRO001\",\r\n        \"date\": \"2024-08-25\",\r\n        \"hours\": 9,\r\n        \"status\": \"NEW\",\r\n        \"rejectionReason\": null\r\n    },\r\n    {\r\n        \"id\": 47,\r\n        \"employeeId\": \"EMP002\",\r\n        \"projectId\": \"PRO001\",\r\n        \"date\": \"2024-08-26\",\r\n        \"hours\": 8,\r\n        \"status\": \"NEW\",\r\n        \"rejectionReason\": null\r\n    },\r\n    {\r\n        \"id\": 48,\r\n        \"employeeId\": \"EMP002\",\r\n        \"projectId\": \"PRO001\",\r\n        \"date\": \"2024-08-27\",\r\n        \"hours\": 10,\r\n        \"status\": \"NEW\",\r\n        \"rejectionReason\": null\r\n    }\r\n]",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8090/workinghours/update",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"workinghours",
+										"update"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Project_Creation",
+			"item": [
+				{
+					"name": "Create_Project",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    // \"projectId\":\"PRO001\",\r\n  \"projectTitle\": \"Payroll Project\",\r\n    \"projectDescription\": \"Description of the new project\",\r\n    \"employeeTeamMembers\": [\r\n        \"EMP004\",\r\n        \"EMP002\"],\r\n    \"supervisorTeamMembers\": [\r\n        \"EMP005\"\r\n        ]\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8085/projects",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"projects"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get_ProjectById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8085/projects/CTPL001",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"projects",
+								"CTPL001"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get_All_Projects",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8085/projects",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"projects"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update_Project",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    // \"projectId\":\"PRO001\",\r\n  \"projectTitle\": \"Timesheet Project\",\r\n    \"projectDescription\": \"Description of the new project\",\r\n    \"employeeTeamMembers\": [\r\n        \"EMP001\",\r\n        \"EMP002\"],\r\n    \"supervisorTeamMembers\": [\r\n        \"EMP004\"\r\n        ]\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8085/projects/CTPL001",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"projects",
+								"CTPL001"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get_Employee_By_EmployeeId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8085/projects/employees/EMP002",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"projects",
+								"employees",
+								"EMP002"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get_Supervisors_By_SupervisorID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8085/projects/supervisors/EMP004",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"projects",
+								"supervisors",
+								"EMP004"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ProjectId_samesas_Supervisor&EmpId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8085/projects/projects/supervisor-for-employee?supervisorId=SUP001&empId=EMP001",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"projects",
+								"projects",
+								"supervisor-for-employee"
+							],
+							"query": [
+								{
+									"key": "supervisorId",
+									"value": "SUP001"
+								},
+								{
+									"key": "empId",
+									"value": "EMP001"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get_Supervisors_By_ProjectId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8085/projects/CTPL001/supervisors",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"projects",
+								"CTPL001",
+								"supervisors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CheckProjectByEmployeeId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8085/projects/employee/EMP002",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"projects",
+								"employee",
+								"EMP002"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get_SupervisorId-ByProjectId&EmployeeId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8085/projects/CTPL002/supervisors/EMP002",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"projects",
+								"CTPL002",
+								"supervisors",
+								"EMP002"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetProjectsBySupervisorId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8085/projects/supervisor/SUP001",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"projects",
+								"supervisor",
+								"SUP001"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetSUpervisorsByEmployeeId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8085/projects/supervisors/by-employee/EMP002",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"projects",
+								"supervisors",
+								"by-employee",
+								"EMP002"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "LOGIN_ACCESS",
+			"item": [
+				{
+					"name": "Admin Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8088/api/login/admin?emailId=sai239@gmail.com&password=sai56sai",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8088",
+							"path": [
+								"api",
+								"login",
+								"admin"
+							],
+							"query": [
+								{
+									"key": "emailId",
+									"value": "sai239@gmail.com"
+								},
+								{
+									"key": "password",
+									"value": "sai56sai"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Employee Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8088/api/login/employee?emailId=praveen99@gmail.com&password=password1999",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8088",
+							"path": [
+								"api",
+								"login",
+								"employee"
+							],
+							"query": [
+								{
+									"key": "emailId",
+									"value": "praveen99@gmail.com"
+								},
+								{
+									"key": "password",
+									"value": "password1999"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Super Admin Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8088/api/login/superadmin?emailId=udayp@gmail.com&password=password123",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8088",
+							"path": [
+								"api",
+								"login",
+								"superadmin"
+							],
+							"query": [
+								{
+									"key": "emailId",
+									"value": "udayp@gmail.com"
+								},
+								{
+									"key": "password",
+									"value": "password123"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
